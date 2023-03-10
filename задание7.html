@@ -1,0 +1,30 @@
+<body>
+<script>
+str=prompt('')
+/*var L = Math.floor(str.length/2)
+for (i=0; i<L; i++){
+if (str[i] != str[str.length - (i - 1)]) {
+	alert('Yes')
+} 
+else {	
+	alert('No')
+	}
+}*/
+
+function solution(str){
+    let chars = new Set(str),
+        k = false;
+
+    for(let char of chars)
+        if(str.match(new RegExp(char, 'gi')).length % 2)
+            if(k)
+                return false;
+            else
+                k = true;
+    return true;
+}
+
+alert(solution(str))
+
+</script>
+</body>

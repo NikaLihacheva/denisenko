@@ -1,0 +1,21 @@
+<body>
+<script>
+var str=prompt("Введите A:","0");
+x=parseInt(str)
+var str=prompt("Введите B:","0");
+y=parseInt(str)
+var str=prompt("Введите C:","0");
+z=parseInt(str)
+var k=0
+var n=0
+
+for (i=x; i<=y; i++){
+    var k=0
+    for (j=1; j<=i; j++){
+        if (i%j==0) {k=k+1} else {k=k+0}
+}if (k==z) {n=n+1} else {n=n+0}
+}
+var t="Колличество чисел с делителем "+z
+alert (t+": "+n);
+</script>
+</body>
